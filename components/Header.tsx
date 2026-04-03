@@ -10,7 +10,7 @@ const Header = () => {
         <Ionicons name="chevron-back" size={22} color={Colors.textPrimary} />
       </TouchableOpacity>
 
-      <Text style={styles.title}>Today's Task</Text>
+      <Text style={styles.title}>Today&apos;s Task</Text>
 
       <TouchableOpacity style={styles.iconButton}>
         <Ionicons

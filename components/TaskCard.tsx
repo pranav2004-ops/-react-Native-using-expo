@@ -39,7 +39,7 @@ const TaskCard = ({ task }: TaskCardProps) => {
           { backgroundColor: task.icon.backgroundColor },
         ]}
       >
-        <Ionicons name={task.icon.name as any} size={18} color={"#ffffff"} />
+        <Ionicons name={task.icon.name} size={18} color="#ffffff" />
       </View>
     </View>
   );

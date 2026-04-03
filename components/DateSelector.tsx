@@ -10,7 +10,7 @@ type DateItem = {
 };
 
 const generateDates = (): DateItem[] => {
-  const base = new Date(2026, 2, 23);
+  const base = new Date(); // Use current date instead of hardcoded
   return Array.from({ length: 5 }, (_, i) => {
     const date = new Date(base);
     date.setDate(base.getDate() + i);
@@ -18,7 +18,7 @@ const generateDates = (): DateItem[] => {
       month: date.toLocaleDateString("en-US", { month: "short" }),
       day: date.getDate(),
       weekday: date.toLocaleDateString("en-US", { weekday: "short" }),
-      key: date.toISOString(),
+      key: date.toISOString().split('T')[0], // Use date only for key
     };
   });
 };

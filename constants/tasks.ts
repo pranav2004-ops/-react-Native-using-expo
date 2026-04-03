@@ -1,7 +1,10 @@
 export type TaskStatus = "Done" | "In Progress" | "To-do";
 
+// List of valid Ionicons names used in task card icons
+export type TaskIconName = "grid" | "arrow-down-circle" | "bookmark";
+
 export type TaskIcon = {
-  name: string;
+  name: TaskIconName;
   backgroundColor: string;
 };
 
@@ -51,9 +54,9 @@ export const TASKS: Task[] = [
 
 export const FILTER_OPTIONS = [
   "All",
-  "To do",
+  "To-do",
   "In Progress",
-  "Completed",
+  "Done",
 ] as const;
 
 export type FilterOptions = (typeof FILTER_OPTIONS)[number];
